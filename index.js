@@ -7,9 +7,7 @@ let brushthickness = 7;
 const erase = () => (ctx.globalCompositeOperation = "destination-out");
 //set current color
 document.querySelector(".color-btn div").style.backgroundColor = color;
-
 resize();
-
 function sizeList() {
   document.querySelector(".size-list").classList.toggle("show-list");
   brushSize();
@@ -48,8 +46,8 @@ function colorPick() {
 
 
 function resize() {
-  ctx.canvas.width = window.innerWidth - 10;
-  ctx.canvas.height = window.innerHeight -100;
+  ctx.canvas.width = window.innerWidth ;
+  ctx.canvas.height = window.innerHeight ;
 }
 
 // initialize position as 0,0
@@ -86,6 +84,7 @@ function onSave() {
 
 // add event listeners to trigger on different mouse events
 document.addEventListener("mousemove", draw);
+document.addEventListener("resize", resize);
 document.addEventListener("mousedown", setPosition);
 document.addEventListener("mouseenter", setPosition);
 document.addEventListener("touchmove", draw);
