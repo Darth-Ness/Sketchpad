@@ -1,0 +1,40 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="index.js" defer></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="aqua.css">
+<title>Sketchpad</title>
+
+<div class="tools banner">
+    <h2 class="blue">Sketchpad</h2>
+    <button onclick="erase()">Eraser</button>
+    <button onclick="onSave()">Save</button>
+    <button class="color-btn ">
+    <input type="color" id="color-picker">
+         <label for="color-picker">
+             <div></div>
+                    Color
+                </label>
+            </button>
+            <button onclick="sizeList()" class="fa-solid fa-caret-down">Size
+                <ul class="size-list">
+                    <li>
+                        <div class="size" style="--set-size:02px"></div>
+                    </li>
+                    <li>
+                        <div class="size" style="--set-size:05px"></div>
+                    </li>
+                    <li>
+                        <div class="size" style="--set-size:08px"></div>
+                    </li>
+                    <li>
+                        <div class="size" style="--set-size:10px"></div>
+                    </li>
+                    <li>
+                        <div class="size" style="--set-size:15px"></div>
+                    </li>
+                </ul>
+            </button>
+        </div>
+    </div>
+</div>
+<canvas height="100%" width="100%" id="draw"></canvas>
