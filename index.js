@@ -5,6 +5,7 @@ let offsetX = canvas.offsetLeft;
 let offsetY = canvas.offsetTop;
 let brushthickness = 7;
 const erase = () => (ctx.globalCompositeOperation = "destination-out");
+const brush = () => (ctx.globalCompositeOperation = "source-over");
 //set current color
 document.querySelector(".color-btn div").style.backgroundColor = color;
 resize();
